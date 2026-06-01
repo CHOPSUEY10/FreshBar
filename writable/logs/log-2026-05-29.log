@@ -1,0 +1,36 @@
+CRITICAL - 2026-05-29 15:00:30 --> Error: Class "Dompdf\Options" not found
+[Method: GET, Route: admin/reports/export-pdf]
+in APPPATH\Controllers\ReportController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ReportController->exportPdf()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-29 15:00:34 --> Error: Class "Dompdf\Options" not found
+[Method: GET, Route: admin/reports/export-pdf]
+in APPPATH\Controllers\ReportController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ReportController->exportPdf()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-29 15:00:44 --> Error: Class "Dompdf\Options" not found
+[Method: GET, Route: admin/reports/export-pdf]
+in APPPATH\Controllers\ReportController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ReportController->exportPdf()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-29 15:01:15 --> Error: Class "Dompdf\Options" not found
+[Method: GET, Route: admin/reports/export-pdf]
+in APPPATH\Controllers\ReportController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ReportController->exportPdf()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

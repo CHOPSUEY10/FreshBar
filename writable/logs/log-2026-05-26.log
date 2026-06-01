@@ -1,0 +1,66 @@
+CRITICAL - 2026-05-26 09:14:29 --> Error: Call to undefined function App\Controllers\freshness_status()
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\DashboardController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-26 09:24:34 --> ErrorException: touch(): Unable to create file null/ci_session472aad1c698d4c720b21e7e620575f37 because No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 188.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'touch(): Unable to create file null/ci_session472aad1c698d4c720b21e7e620575f37 because No such file or directory', 'C:\\wamp64\\www\\Freshbar\\system\\Session\\Handlers\\FileHandler.php', 188)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(188): touch('null/ci_session472aad1c698d4c720b21e7e620575f37')
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->write('472aad1c698d4c720b21e7e620575f37', '__ci_last_regenerate|i:1779787472;_ci_previous_url|s:42:"http://localhost/Freshbar/public/dashboard";user_id|s:1:"1";name|s:14:"Admin Freshbar";username|s:5:"admin";role|s:5:"admin";logged_in|b:1;__ci_vars|a:0:{}')
+ 4 [internal function]: session_write_close()
+CRITICAL - 2026-05-26 09:24:38 --> ErrorException: touch(): Unable to create file null/ci_session472aad1c698d4c720b21e7e620575f37 because No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 188.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'touch(): Unable to create file null/ci_session472aad1c698d4c720b21e7e620575f37 because No such file or directory', 'C:\\wamp64\\www\\Freshbar\\system\\Session\\Handlers\\FileHandler.php', 188)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(188): touch('null/ci_session472aad1c698d4c720b21e7e620575f37')
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->write('472aad1c698d4c720b21e7e620575f37', '__ci_last_regenerate|i:1779787472;_ci_previous_url|s:42:"http://localhost/Freshbar/public/dashboard";user_id|s:1:"1";name|s:14:"Admin Freshbar";username|s:5:"admin";role|s:5:"admin";logged_in|b:1;__ci_vars|a:0:{}')
+ 4 [internal function]: session_write_close()
+CRITICAL - 2026-05-26 09:24:40 --> ErrorException: touch(): Unable to create file null/ci_session472aad1c698d4c720b21e7e620575f37 because No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 188.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'touch(): Unable to create file null/ci_session472aad1c698d4c720b21e7e620575f37 because No such file or directory', 'C:\\wamp64\\www\\Freshbar\\system\\Session\\Handlers\\FileHandler.php', 188)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(188): touch('null/ci_session472aad1c698d4c720b21e7e620575f37')
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->write('472aad1c698d4c720b21e7e620575f37', '__ci_last_regenerate|i:1779787472;_ci_previous_url|s:42:"http://localhost/Freshbar/public/dashboard";user_id|s:1:"1";name|s:14:"Admin Freshbar";username|s:5:"admin";role|s:5:"admin";logged_in|b:1;__ci_vars|a:0:{}')
+ 4 [internal function]: session_write_close()
+CRITICAL - 2026-05-26 09:24:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "staff/index.php"
+[Method: GET, Route: admin/staff]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('staff/index.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('staff/index', [], true)
+ 3 APPPATH\Controllers\StaffController.php(13): view('staff/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\StaffController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-26 09:25:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "staff/index.php"
+[Method: GET, Route: admin/staff]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('staff/index.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('staff/index', [], true)
+ 3 APPPATH\Controllers\StaffController.php(13): view('staff/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\StaffController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-26 09:33:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "staff/index.php"
+[Method: GET, Route: admin/staff]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('staff/index.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('staff/index', [], true)
+ 3 APPPATH\Controllers\StaffController.php(13): view('staff/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\StaffController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
