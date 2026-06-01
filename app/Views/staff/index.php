@@ -4,8 +4,8 @@
 <div class="page-card">
     <div class="page-card-header">
         <div class="page-card-title">
-            <h2>Daftar Staff Gudang</h2>
-            <p>Kelola akun staff gudang yang dapat mengakses sistem Freshbar.</p>
+            <h2>Daftar Karyawan</h2>
+            <p>Kelola akun karyawan yang dapat mengakses sistem Freshbar.</p>
         </div>
 
         <div class="page-card-actions">

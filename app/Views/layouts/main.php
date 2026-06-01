@@ -169,7 +169,7 @@
             <?php if ($role === 'admin'): ?>
                 <a class="nav-link <?= freshbar_active('admin/staff', $uri) ?>" href="<?= site_url('admin/staff') ?>">
                     <span class="nav-icon"><?= freshbar_icon('staff') ?></span>
-                    <span>Data Staff</span>
+                    <span>Data Karyawan</span>
                 </a>
             <?php endif; ?>
 
