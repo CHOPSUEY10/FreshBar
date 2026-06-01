@@ -63,8 +63,20 @@ class ReportController extends BaseController
 
         $stockModel = new StockBatchModel();
         $scanModel = new ScanLogModel();
-
+        
+        $db = \Config\Database::connect();
+        
+        // Fetch ALL products
+        $products = $db->query("SELECT * FROM products ORDER BY name ASC")->getResultArray();
+        
+        // Fetch ALL batches
         $batches = $stockModel->getWithProducts();
+        
+        // Group batches by product_id
+        $batchesByProduct = [];
+        foreach ($batches as $batch) {
+            $batchesByProduct[$batch['product_id']][] = $batch;
+        }
 
         $totalSegar = 0;
         $totalKurangSegar = 0;
@@ -72,33 +84,53 @@ class ReportController extends BaseController
 
         $reportRows = [];
 
-        foreach ($batches as $batch) {
-            $autoFreshness = freshness_status($batch['entry_date'], $batch['shelf_life_days']);
+        foreach ($products as $product) {
+            if (isset($batchesByProduct[$product['id']])) {
+                // Product has batches, add a row for each batch
+                foreach ($batchesByProduct[$product['id']] as $batch) {
+                    $autoFreshness = freshness_status($batch['entry_date'], $batch['shelf_life_days']);
 
-            if (!empty($batch['freshness_status'])) {
-                $freshness = freshness_status_detail($batch['freshness_status']);
-                $freshness['age'] = $autoFreshness['age'];
-                $freshness['percentage'] = $autoFreshness['percentage'];
+                    if (!empty($batch['freshness_status'])) {
+                        $freshness = freshness_status_detail($batch['freshness_status']);
+                        $freshness['age'] = $autoFreshness['age'];
+                        $freshness['percentage'] = $autoFreshness['percentage'];
+                    } else {
+                        $freshness = $autoFreshness;
+                    }
+
+                    if ($freshness['status'] === 'Segar') {
+                        $totalSegar++;
+                    } elseif ($freshness['status'] === 'Tidak Segar') {
+                        $totalTidakSegar++;
+                    } else {
+                        $totalKurangSegar++;
+                    }
+
+                    $batch['freshness'] = $freshness;
+                    $reportRows[] = $batch;
+                }
             } else {
-                $freshness = $autoFreshness;
+                // Product has no batches (Out of Stock)
+                $reportRows[] = [
+                    'barcode' => '-',
+                    'product_name' => $product['name'],
+                    'type' => $product['type'],
+                    'unit' => $product['unit'],
+                    'entry_date' => '-',
+                    'quantity_current' => 0,
+                    'freshness' => [
+                        'status' => 'Kosong',
+                        'age' => '-',
+                        'recommendation' => 'Stok habis. Segera lakukan pengadaan barang (input barang masuk).'
+                    ]
+                ];
             }
-
-            if ($freshness['status'] === 'Segar') {
-                $totalSegar++;
-            } elseif ($freshness['status'] === 'Tidak Segar') {
-                $totalTidakSegar++;
-            } else {
-                $totalKurangSegar++;
-            }
-
-            $batch['freshness'] = $freshness;
-            $reportRows[] = $batch;
         }
 
         return [
             'title'             => 'Laporan Freshbar',
             'batches'           => $reportRows,
-            'totalBatch'        => count($reportRows),
+            'totalBatch'        => count($batches), // Original batch count
             'totalScan'         => $scanModel->countAllResults(),
             'totalSegar'        => $totalSegar,
             'totalKurangSegar'  => $totalKurangSegar,

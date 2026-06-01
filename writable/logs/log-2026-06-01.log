@@ -1,0 +1,302 @@
+CRITICAL - 2026-06-01 11:07:30 --> ParseError: syntax error, unexpected identifier "datang", expecting "," or ";"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard\index.php on line 41.
+ 1 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 3 APPPATH\Controllers\DashboardController.php(88): view('dashboard/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:07:32 --> ParseError: syntax error, unexpected identifier "datang", expecting "," or ";"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard\index.php on line 41.
+ 1 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 3 APPPATH\Controllers\DashboardController.php(88): view('dashboard/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:12:51 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: sales/store]
+in SYSTEMPATH\Security\Security.php on line 258.
+ 1 SYSTEMPATH\Security\Security.php(258): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('sales/store', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:12:58 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: sales/store]
+in SYSTEMPATH\Security\Security.php on line 258.
+ 1 SYSTEMPATH\Security\Security.php(258): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('sales/store', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:13:06 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: sales/store]
+in SYSTEMPATH\Security\Security.php on line 258.
+ 1 SYSTEMPATH\Security\Security.php(258): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('sales/store', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:32:56 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: sales/store]
+in SYSTEMPATH\Security\Security.php on line 258.
+ 1 SYSTEMPATH\Security\Security.php(258): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('sales/store', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:34:07 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: sales/store]
+in SYSTEMPATH\Security\Security.php on line 258.
+ 1 SYSTEMPATH\Security\Security.php(258): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('sales/store', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-06-01 11:47:10 --> Unknown column 'stock_batches.barcode' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = :sale_items.sale_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaleItemModel.php(28): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SalesController.php(45): App\Models\SaleItemModel->getItemsBySaleId('1')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\SalesController->show('1')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SalesController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:47:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_batches.barcode' in 'field list'
+[Method: GET, Route: admin/sales/show/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = :sale_items.sale_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SaleItemModel.php(28): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SalesController.php(45): App\Models\SaleItemModel->getItemsBySaleId('1')
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\SalesController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:47:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_batches.barcode' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = :sale_items.sale_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SaleItemModel.php(28): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SalesController.php(45): App\Models\SaleItemModel->getItemsBySaleId('1')
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\SalesController->show('1')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SalesController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:47:10 --> [Caused by] mysqli_sql_exception: Unknown column 'stock_batches.barcode' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = :sale_items.sale_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaleItemModel.php(28): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SalesController.php(45): App\Models\SaleItemModel->getItemsBySaleId('1')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\SalesController->show('1')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SalesController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-06-01 11:47:22 --> Unknown column 'stock_batches.barcode' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = :sale_items.sale_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaleItemModel.php(28): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SalesController.php(45): App\Models\SaleItemModel->getItemsBySaleId('1')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\SalesController->show('1')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SalesController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:47:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_batches.barcode' in 'field list'
+[Method: GET, Route: admin/sales/show/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = :sale_items.sale_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SaleItemModel.php(28): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SalesController.php(45): App\Models\SaleItemModel->getItemsBySaleId('1')
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\SalesController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:47:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_batches.barcode' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = :sale_items.sale_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SaleItemModel.php(28): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SalesController.php(45): App\Models\SaleItemModel->getItemsBySaleId('1')
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\SalesController->show('1')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SalesController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-01 11:47:22 --> [Caused by] mysqli_sql_exception: Unknown column 'stock_batches.barcode' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale_items`.*, `products`.`name` as `product_name`, `stock_batches`.`barcode`
+FROM `sale_items`
+JOIN `stock_batches` ON `stock_batches`.`id` = `sale_items`.`batch_id`
+JOIN `products` ON `products`.`id` = `stock_batches`.`product_id`
+WHERE `sale_items`.`sale_id` = :sale_items.sale_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaleItemModel.php(28): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SalesController.php(45): App\Models\SaleItemModel->getItemsBySaleId('1')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\SalesController->show('1')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SalesController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

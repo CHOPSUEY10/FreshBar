@@ -167,11 +167,6 @@
             </a>
 
             <?php if ($role === 'admin'): ?>
-                <a class="nav-link <?= freshbar_active('admin/products', $uri) ?>" href="<?= site_url('admin/products') ?>">
-                    <span class="nav-icon"><?= freshbar_icon('products') ?></span>
-                    <span>Data Produk</span>
-                </a>
-
                 <a class="nav-link <?= freshbar_active('admin/staff', $uri) ?>" href="<?= site_url('admin/staff') ?>">
                     <span class="nav-icon"><?= freshbar_icon('staff') ?></span>
                     <span>Data Staff</span>
@@ -180,7 +175,7 @@
 
             <a class="nav-link <?= freshbar_active('stock', $uri) ?>" href="<?= site_url('stock') ?>">
                 <span class="nav-icon"><?= freshbar_icon('stock') ?></span>
-                <span>Barang Masuk</span>
+                <span>Produk & Barang Masuk</span>
             </a>
 
             <a class="nav-link <?= freshbar_active('scan', $uri) ?>" href="<?= site_url('scan') ?>">
@@ -188,10 +183,20 @@
                 <span>Scan Barcode</span>
             </a>
 
+            <a class="nav-link <?= freshbar_active('sales', $uri) ?>" href="<?= site_url('sales') ?>">
+                <span class="nav-icon"><?= freshbar_icon('scan') ?></span> <!-- Reusing scan icon -->
+                <span>Pencatatan Penjualan (POS)</span>
+            </a>
+
             <?php if ($role === 'admin'): ?>
+                <a class="nav-link <?= freshbar_active('admin/sales', $uri) ?>" href="<?= site_url('admin/sales') ?>">
+                    <span class="nav-icon"><?= freshbar_icon('report') ?></span>
+                    <span>Laporan Penjualan</span>
+                </a>
+
                 <a class="nav-link <?= freshbar_active('admin/reports', $uri) ?>" href="<?= site_url('admin/reports') ?>">
                     <span class="nav-icon"><?= freshbar_icon('report') ?></span>
-                    <span>Laporan</span>
+                    <span>Laporan Stok</span>
                 </a>
             <?php endif; ?>
 

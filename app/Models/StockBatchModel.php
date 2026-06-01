@@ -11,7 +11,6 @@ class StockBatchModel extends Model
 
     protected $allowedFields = [
         'product_id',
-        'barcode',
         'entry_date',
         'quantity_in',
         'quantity_current',
@@ -30,6 +29,8 @@ class StockBatchModel extends Model
                 products.name AS product_name,
                 products.type,
                 products.unit,
+                products.price,
+                products.barcode,
                 products.shelf_life_days,
                 users.name AS created_by_name
             ')
@@ -44,17 +45,24 @@ class StockBatchModel extends Model
         return $this->findAll();
     }
 
-    public function findByBarcode($barcode)
+    /**
+     * Dapatkan stok tertua yang masih tersedia berdasarkan barcode produk (FIFO)
+     */
+    public function getOldestAvailableBatchByBarcode($barcode)
     {
         return $this->select('
                 stock_batches.*,
                 products.name AS product_name,
                 products.type,
                 products.unit,
+                products.price,
+                products.barcode,
                 products.shelf_life_days
             ')
             ->join('products', 'products.id = stock_batches.product_id')
-            ->where('stock_batches.barcode', $barcode)
+            ->where('products.barcode', $barcode)
+            ->where('stock_batches.quantity_current >', 0)
+            ->orderBy('stock_batches.entry_date', 'ASC') // FIFO: cari yang paling lama dulu
             ->first();
     }
 }

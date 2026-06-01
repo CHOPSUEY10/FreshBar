@@ -35,24 +35,120 @@
 </div>
 
 <div class="dashboard-card welcome-box">
-    <h2>Selamat datang di Freshbar 🍃</h2>
-
-    <p>
-        Sistem ini digunakan untuk mengelola stok buah dan sayur, membuat barcode,
-        scan barcode, serta mendeteksi kesegaran otomatis berdasarkan tanggal masuk.
-    </p>
-
     <?php if ($role === 'admin'): ?>
-        <p>
-            Role kamu adalah <b>Admin</b>. Kamu dapat mengelola produk, staff,
-            barang masuk, barcode, scan, dan laporan.
-        </p>
+        <h2> <b>Selamat Datang <?=  $role ?> Freshbar</b> </h2>
     <?php else: ?>
-        <p>
-            Role kamu adalah <b>Staff Gudang</b>. Kamu dapat input barang masuk,
-            update stok, dan scan barcode.
-        </p>
+       <h2> <b>Selamat Datang <?=  $role ?> Freshbar</b> </h2>
     <?php endif; ?>
 </div>
+
+<div class="dashboard-grid" style="margin-top: 20px; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px;">
+    <!-- Container for Stock Chart -->
+    <div class="dashboard-card">
+        <h3>Grafik Stock Masuk & Keluar (Tidak Fresh)</h3>
+        <canvas id="stockChart" height="150"></canvas>
+    </div>
+
+    <!-- Container for Sales Chart -->
+    <div class="dashboard-card">
+        <h3>Grafik Penjualan Bulanan</h3>
+        <canvas id="salesChart" height="150"></canvas>
+    </div>
+</div>
+
+<!-- Toast Notifikasi (Jika ada produk tidak fresh) -->
+<?php if ($bad > 0): ?>
+    <div class="toast-wrapper" id="badStockToastWrapper">
+        <div class="toast-message toast-error" id="badStockToast">
+            <div class="toast-icon">
+                <span>!</span>
+            </div>
+            <div class="toast-content">
+                <p>Ada <?= esc($bad) ?> batch produk yang TIDAK SEGAR di gudang!</p>
+            </div>
+            <button type="button" class="toast-close" onclick="closeToast(this)">×</button>
+            <div class="toast-progress"></div>
+        </div>
+    </div>
+<?php endif; ?>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Init Chart
+        const chartDataRaw = '<?= addslashes($chartData ?? '{}') ?>';
+        if (chartDataRaw && chartDataRaw !== '{}') {
+            const data = JSON.parse(chartDataRaw);
+            
+            // Stock Chart
+            const ctxStock = document.getElementById('stockChart').getContext('2d');
+            new Chart(ctxStock, {
+                type: 'bar',
+                data: {
+                    labels: data.labels,
+                    datasets: [
+                        {
+                            label: 'Stock Masuk',
+                            data: data.stockIn,
+                            backgroundColor: '#2ecc71',
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Stock Keluar (Tidak Fresh)',
+                            data: data.stockOutBad,
+                            backgroundColor: '#e74c3c',
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { stepSize: 1 }
+                        }
+                    }
+                }
+            });
+
+            // Sales Chart
+            const ctxSales = document.getElementById('salesChart').getContext('2d');
+            new Chart(ctxSales, {
+                type: 'line',
+                data: {
+                    labels: data.labels,
+                    datasets: [
+                        {
+                            label: 'Total Penjualan (Rp)',
+                            data: data.salesTotal,
+                            borderColor: '#3498db',
+                            backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Auto-hide bad stock toast after 5s
+        const badToast = document.getElementById('badStockToast');
+        if (badToast) {
+            setTimeout(function() {
+                hideToast(badToast);
+            }, 5000);
+        }
+    });
+</script>
 
 <?= $this->endSection() ?>

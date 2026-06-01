@@ -23,6 +23,9 @@ $action = $isEdit ? site_url('admin/products/update/' . $product['id']) : site_u
         <label>Satuan</label>
         <input type="text" name="unit" class="form-control" value="<?= esc($product['unit'] ?? 'kg') ?>" required>
 
+        <label>Harga Jual (Rp)</label>
+        <input type="number" name="price" class="form-control" value="<?= esc($product['price'] ?? 0) ?>" min="0" required>
+
         <label>Masa Segar / Shelf Life</label>
         <input type="number" name="shelf_life_days" class="form-control" value="<?= esc($product['shelf_life_days'] ?? 3) ?>" required>
 

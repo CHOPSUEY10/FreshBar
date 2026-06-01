@@ -299,7 +299,11 @@
                 </p>
 
                 <p class="info-text">
-                    Tanggal Masuk: <?= esc($batch['entry_date']) ?>
+                    <?php if (isset($batch['entry_date'])): ?>
+                        Tanggal Masuk: <?= esc($batch['entry_date']) ?>
+                    <?php else: ?>
+                        Harga: Rp <?= number_format($batch['price'] ?? 0, 0, ',', '.') ?>
+                    <?php endif; ?>
                 </p>
 
                 <div class="barcode-wrap">
@@ -313,7 +317,11 @@
                 </p>
 
                 <p class="location-text">
-                    Lokasi: <?= esc($batch['location']) ?>
+                    <?php if (isset($batch['location'])): ?>
+                        Lokasi: <?= esc($batch['location']) ?>
+                    <?php else: ?>
+                        Master Data Produk
+                    <?php endif; ?>
                 </p>
             </div>
 

@@ -9,9 +9,7 @@
         </div>
 
         <div class="page-card-actions">
-            <a href="<?= site_url('admin/products/create') ?>" class="btn btn-primary">
-                + Tambah Produk
-            </a>
+            <!-- Tambah produk dihilangkan, sekarang dari menu Barang Masuk -->
         </div>
     </div>
 
@@ -23,6 +21,7 @@
                     <th>Nama Produk</th>
                     <th>Jenis</th>
                     <th>Satuan</th>
+                    <th>Harga (Rp)</th>
                     <th>Masa Segar</th>
                     <th class="col-action">Aksi</th>
                 </tr>
@@ -36,6 +35,7 @@
                             <td><?= esc($product['name']) ?></td>
                             <td><?= esc($product['type']) ?></td>
                             <td><?= esc($product['unit']) ?></td>
+                            <td><?= number_format($product['price'] ?? 0, 0, ',', '.') ?></td>
                             <td><?= esc($product['shelf_life_days']) ?> hari</td>
                             <td>
                                 <div class="action-row">

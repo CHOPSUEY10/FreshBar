@@ -16,29 +16,6 @@ class ProductController extends BaseController
         ]);
     }
 
-    public function create()
-    {
-        return view('products/form', [
-            'title' => 'Tambah Produk',
-            'product' => null,
-        ]);
-    }
-
-    public function store()
-    {
-        $model = new ProductModel();
-
-        $model->insert([
-            'name' => $this->request->getPost('name'),
-            'type' => $this->request->getPost('type'),
-            'unit' => $this->request->getPost('unit'),
-            'shelf_life_days' => $this->request->getPost('shelf_life_days'),
-            'description' => $this->request->getPost('description'),
-        ]);
-
-        return redirect()->to(site_url('admin/products'))->with('success', 'Produk berhasil ditambahkan.');
-    }
-
     public function edit($id)
     {
         $model = new ProductModel();
@@ -51,14 +28,28 @@ class ProductController extends BaseController
 
     public function update($id)
     {
+        $rules = [
+            'name'           => 'required|max_length[100]',
+            'type'           => 'permit_empty|max_length[50]',
+            'unit'           => 'permit_empty|max_length[20]',
+            'price'          => 'required|integer|greater_than_equal_to[0]',
+            'shelf_life_days'=> 'required|integer|greater_than[0]',
+            'description'    => 'permit_empty',
+        ];
+
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput()->with('error', implode(' ', $this->validator->getErrors()));
+        }
+
         $model = new ProductModel();
 
         $model->update($id, [
-            'name' => $this->request->getPost('name'),
-            'type' => $this->request->getPost('type'),
-            'unit' => $this->request->getPost('unit'),
-            'shelf_life_days' => $this->request->getPost('shelf_life_days'),
-            'description' => $this->request->getPost('description'),
+            'name'            => $this->request->getPost('name'),
+            'type'            => $this->request->getPost('type'),
+            'unit'            => $this->request->getPost('unit'),
+            'price'           => (int) $this->request->getPost('price'),
+            'shelf_life_days' => (int) $this->request->getPost('shelf_life_days'),
+            'description'     => $this->request->getPost('description'),
         ]);
 
         return redirect()->to(site_url('admin/products'))->with('success', 'Produk berhasil diperbarui.');

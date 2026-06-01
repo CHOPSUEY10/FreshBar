@@ -168,6 +168,11 @@
         color: #991b1b;
     }
 
+    .status-kosong {
+        background: #f3f4f6;
+        color: #374151;
+    }
+
     .table-empty {
         text-align: center !important;
         color: #6b7280 !important;
@@ -262,6 +267,9 @@
                             } elseif ($fresh['status'] === 'Tidak Segar') {
                                 $statusClass = 'status-tidak';
                                 $statusText = 'Tidak Segar';
+                            } elseif ($fresh['status'] === 'Kosong') {
+                                $statusClass = 'status-kosong';
+                                $statusText = 'Kosong';
                             } else {
                                 $statusClass = 'status-kurang';
                                 $statusText = 'Kurang Segar';

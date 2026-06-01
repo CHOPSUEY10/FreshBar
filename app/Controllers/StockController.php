@@ -19,11 +19,19 @@ class StockController extends BaseController
         helper('freshbar');
 
         $model = new StockBatchModel();
-
-        return view('stock/index', [
-            'title' => 'Barang Masuk',
+        
+        $data = [
+            'title' => 'Produk & Barang Masuk',
             'batches' => $model->getWithProducts(),
-        ]);
+        ];
+
+        // Jika admin, tampilkan juga master produk
+        if (session()->get('role') === 'admin') {
+            $productModel = new \App\Models\ProductModel();
+            $data['products'] = $productModel->orderBy('id', 'DESC')->findAll();
+        }
+
+        return view('stock/index', $data);
     }
 
     public function create()
@@ -38,14 +46,56 @@ class StockController extends BaseController
 
     public function store()
     {
-        $stockModel = new StockBatchModel();
+        $rules = [
+            'product_name'    => 'required|max_length[100]',
+            'type'            => 'required|max_length[50]',
+            'unit'            => 'required|max_length[20]',
+            'entry_date'      => 'required|valid_date',
+            'quantity_in'     => 'required|integer|greater_than[0]',
+            'price'           => 'required|integer|greater_than_equal_to[0]',
+            'shelf_life_days' => 'required|integer|greater_than[0]',
+            'location'        => 'permit_empty|max_length[100]',
+            'note'            => 'permit_empty',
+        ];
 
-        $barcode = 'FRB-' . date('YmdHis') . '-' . rand(100, 999);
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput()->with('error', implode(' ', $this->validator->getErrors()));
+        }
+
+        $stockModel = new StockBatchModel();
+        $productModel = new ProductModel();
+
+        $productName = trim($this->request->getPost('product_name'));
+        
+        // Cari produk berdasarkan nama
+        $existingProduct = $productModel->where('name', $productName)->first();
+        
+        $productData = [
+            'type'            => $this->request->getPost('type'),
+            'unit'            => $this->request->getPost('unit'),
+            'price'           => $this->request->getPost('price'),
+            'shelf_life_days' => $this->request->getPost('shelf_life_days'),
+        ];
+        
+        if ($existingProduct) {
+            $productId = $existingProduct['id'];
+            // Jika produk belum punya barcode (migrasi), buatkan
+            if (empty($existingProduct['barcode'])) {
+                $productData['barcode'] = 'FRB-' . date('YmdHis') . '-' . rand(100, 999);
+            }
+            // Update data master produk yang sudah ada
+            $productModel->update($productId, $productData);
+        } else {
+            // Insert produk baru
+            $productData['name'] = $productName;
+            $productData['barcode'] = 'FRB-' . date('YmdHis') . '-' . rand(100, 999);
+            $productId = $productModel->insert($productData);
+        }
+
         $qty = (int) $this->request->getPost('quantity_in');
 
         $stockModel->insert([
-            'product_id'        => $this->request->getPost('product_id'),
-            'barcode'           => $barcode,
+            'product_id'        => $productId,
             'entry_date'        => $this->request->getPost('entry_date'),
             'quantity_in'       => $qty,
             'quantity_current'  => $qty,

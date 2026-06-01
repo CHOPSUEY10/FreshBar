@@ -686,6 +686,7 @@ textarea.form-control {
     padding: 30px;
     margin-bottom: 22px;
     box-shadow: var(--card-shadow);
+    text-align: left;
 }
 
 .card h2 {

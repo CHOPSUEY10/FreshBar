@@ -22,9 +22,15 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('stock/delete/(:num)', 'StockController::delete/$1');
 
     $routes->get('barcode/print/(:num)', 'BarcodeController::print/$1');
+    $routes->get('barcode/print_product/(:num)', 'BarcodeController::print_product/$1');
 
     $routes->get('scan', 'ScanController::index');
     $routes->post('scan/check', 'ScanController::check');
+
+    // Modul Penjualan
+    $routes->get('sales', 'SalesController::create');
+    $routes->post('sales/scanBarcode', 'SalesController::scanBarcode');
+    $routes->post('sales/store', 'SalesController::store');
 
     // Khusus Admin
     $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
@@ -44,5 +50,9 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
         $routes->get('reports', 'ReportController::index');
         $routes->get('reports/export-pdf', 'ReportController::exportPdf');
+
+        // Admin Sales Reports
+        $routes->get('sales', 'SalesController::index');
+        $routes->get('sales/show/(:num)', 'SalesController::show/$1');
     });
 });
