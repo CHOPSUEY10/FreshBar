@@ -23,7 +23,7 @@ class ScanController extends BaseController
         $stockModel = new StockBatchModel();
         $scanModel = new ScanLogModel();
 
-        $batch = $stockModel->findByBarcode($barcode);
+        $batch = $stockModel->getOldestAvailableBatchByBarcode($barcode);
 
         if (!$batch) {
             return redirect()

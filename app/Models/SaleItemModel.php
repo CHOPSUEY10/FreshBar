@@ -21,7 +21,7 @@ class SaleItemModel extends Model
 
     public function getItemsBySaleId($saleId)
     {
-        return $this->select('sale_items.*, products.name as product_name, stock_batches.barcode')
+        return $this->select('sale_items.*, products.name as product_name, products.barcode')
                     ->join('stock_batches', 'stock_batches.id = sale_items.batch_id')
                     ->join('products', 'products.id = stock_batches.product_id')
                     ->where('sale_items.sale_id', $saleId)
